@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Env Safety Agent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+
+<body>
+  <header>
+    <h2>Environmental Safety Agent</h2>
+
+    <input id="searchBox" type="text" placeholder="Search places "/>
+
+    <button id="searchBtn">Search</button>
+
+    <select id="profile">
+      <option value="general">General</option>
+      <option value="asthma">Asthma</option>
+      <option value="elderly">Elderly</option>
+    </select>
+
+    <button id="startNav">Start Safe Navigation</button>
+    <label>
+    <label style="color:white; font-size:14px;">
+    <input type="checkbox" id="voiceToggle" checked />
+    Voice alerts
+    </label>
+
+
+  </header>
+
+  <main>
+    <!-- 🔥 MAP -->
+    <div id="map"></div>
+
+    <!-- SIDE PANEL -->
+    <aside>
+      <div id="status">Select a destination</div>
+      <div id="alertBox" class="hidden"></div>
+      <div id="agentLog"></div>
+    </aside>
+  </main>
+
+  <!-- ✅ Leaflet JS (MUST LOAD BEFORE main.js) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- ✅ Google Maps JS API -->
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_API_KEY%&libraries=places"
+  async
+></script>
+
+  <!-- App JS -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

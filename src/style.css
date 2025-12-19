@@ -1,0 +1,66 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  height: 60px;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+header input,
+header select,
+header button {
+  padding: 6px 8px;
+}
+
+/* Layout */
+main {
+  height: calc(100vh - 60px);
+  display: flex;
+}
+
+/* 🔥 MAP FIX */
+#map {
+  flex: 1;
+  height: 100%;
+}
+
+/* Side panel */
+aside {
+  width: 320px;
+  background: #f8fafc;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Alerts */
+#alertBox {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+#agentLog {
+  font-size: 13px;
+  margin-top: 10px;
+}
